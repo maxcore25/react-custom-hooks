@@ -1,18 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import { useToggle } from './hooks/useToggle';
 
 function App() {
-  const [isVisible, setIsVisible] = useState(true);
-
-  const handleVisible = () => {
-    setIsVisible(!isVisible);
-  };
+  const [isVisible, toggleIsVisible] = useToggle(true);
 
   return (
     <div className='App'>
       <header className='App-header'>
-        <button onClick={() => handleVisible()}>Toggle React</button>
+        <button onClick={() => toggleIsVisible()}>Toggle React</button>
         {isVisible && (
           <>
             <img src={logo} className='App-logo' alt='logo' />
