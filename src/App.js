@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
 import { useToggle } from './hooks/useToggle';
 import { Books } from './components/Books';
 import { books } from './data/books';

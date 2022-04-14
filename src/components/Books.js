@@ -11,7 +11,7 @@ export const Books = props => {
 };
 
 const Book = props => {
-  const { id, title, price } = props;
+  const { title, price } = props;
 
   return (
     <div
