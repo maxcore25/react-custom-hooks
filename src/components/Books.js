@@ -1,4 +1,4 @@
-const Books = props => {
+export const Books = props => {
   const { items = [] } = props;
 
   return (
@@ -14,7 +14,9 @@ const Book = props => {
   const { id, title, price } = props;
 
   return (
-    <div className='book'>
+    <div
+      className='book'
+      style={{ border: '1px solid #fff', margin: '10px 0', padding: '.5em' }}>
       <h2>{title}</h2>
       <span>{price}</span>
       <button>Buy</button>

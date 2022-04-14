@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import { useToggle } from './hooks/useToggle';
+import { Books } from './components/Books';
+import { books } from './data/books';
 
 function App() {
   const [isVisible, toggleIsVisible] = useToggle(true);
@@ -25,6 +27,9 @@ function App() {
             </a>
           </>
         )}
+        <div>
+          <Books items={books} />
+        </div>
       </header>
     </div>
   );
